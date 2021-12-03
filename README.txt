@@ -45,6 +45,7 @@ All methods beginning with get will require a print statement. For example, to g
 
 How to use the included Demo Program:
 	Uncomment the first line, which should be mynoodle = Instant_Noodles("x", "y", "z"). x must be replaced with a valid brand of your choice, y must be replaced with a valid noodletype, z must be replaced with a valid flavor
+	You should be able to run the program without errors after each part
 	Part1 - Brand - Valid Brands: Nongshim, Nissin, Maruchan
 			Choose a brand to replace x with, inside the quotation marks
 		Noodle Type - Valid Noodle Types: Udon, Ramen, Soba
@@ -72,9 +73,9 @@ How to use the included Demo Program:
 
 
  How to set up your own demo program:
-	Comment out everything in the main() function before making your own demo program
-	Part 1 - Choosing your noodles
-		Step 1: Create an object name of your choice and have it equal "Instant_Noodles()". Inside the parenthesis, there should be 3 string arguments in quotations marks, separated by commas, which will be in this order; Brand, Noodle Type, Flavor.
+	Comment out everything in the main() function before making your own demo program. After each of the steps you should be able to run the program
+	Step 1 - Choosing your noodles
+		Part 1: Create an object name of your choice and have it equal "Instant_Noodles()". Inside the parenthesis, there should be 3 string arguments in quotations marks, separated by commas, which will be in this order; Brand, Noodle Type, Flavor.
 			keep in mind that valid options are limited and are listed below:
 			Valid Brands:
 				Nongshim, Nissin, Maruchan
@@ -84,7 +85,7 @@ How to use the included Demo Program:
 				Chicken, Pork, Shrimp, Beef
 			Here is an example object that is valid: mynoodle = Instant_Noodles("Nongshim", "ramen", "shrimp")
 			Make sure there is an indentation before the name of your object name, so that it will work under the main() function
-	Part 2 - Making Changes with set methods (optional):
+	Step 2 - Making Changes with set methods (optional):
 		Part 2.1  - Make any changes to brand
 				Step 1 - Type your object name followed by .set_brand(), no spaces. the area within the parenthesis should be a string in quotation marks of a valid brand you wish to change your current one to. Please ensure you choose a valid option, otherwise you will be given a default brand of "nissin"
 		Part 2.2  - Make changes to noodle type
@@ -92,17 +93,17 @@ How to use the included Demo Program:
 		Part 3.3  - Make changes to flavor
 				Step 1 - Type your object name followed by .set_flavor(), no spaces. the area within the parenthesis will be a string in quotation marks of a valid flavor you wish to change your current one to. Please ensure you choose a valid option, otherwise you will be given a default type of "shrimp"
 	
-	Part 3 - Finding out if your chosen options were valid
+	Step 3 - Finding out if your chosen options were valid
 		Step 1 - Type print(), then within the parenthesis, type the name of your object, followed by any of the get methods listed above (.get_brand(), .get_noodle_type(), .get_flavor()). 
 			The get methods will not take in any arguments. 
 			Here is an example of what this step should look like: print(self.get_brand()) 
 			**Note that "self" in the example should be the name of your object**
 
-	Part 4 - Find instructions on how long you should microwave your noodles
+	Step 4 - Find instructions on how long you should microwave your noodles
 		Type the name of your object, followed by .how_to_cook() to call the method. This will print instructions on how to cook the specified noodle you chose. It will also include how long you should microwave your noodles. You will need to remember this for the next function
 		Example: self.how_to_cook(). Again, self should be replaced with your chosen object name
 	
-	Part 5 - Microwave your noodles
+	Step 5 - Microwave your noodles
 		This method will print a timer counting down in seconds it takes your noodles to cook in the microwave. Type your object name, then .microwave() to call the microwave method.
 		**Note** This method takes in 1 argument, an integer. The integer should be the length of time in minutes you must cook your noodles. This information on how long you must cook the noodles can be found in the .how_to_cook() method
 		Example: self.microwave(). Again, self should be replaced with your chosen object name
