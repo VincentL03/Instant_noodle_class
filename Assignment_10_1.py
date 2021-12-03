@@ -49,7 +49,7 @@ class Instant_Noodles:
     else:
       self.__noodle_type = "ramen"
       self.__timer = 5 #noodletype ramen needs to be microwaved for 5 mins
-  
+    return self.__timer
 #######################################
 #method to return the timer 
   def get_timer(self):
@@ -67,6 +67,7 @@ class Instant_Noodles:
       self.__brand = new_brand
     else:
       self.__brand = "nissin" #if new brand is not one of the three, it will be set to nissin
+    return self.__brand #returns brand value
 
 #gets and returns brand name
   def get_brand(self):
@@ -85,7 +86,7 @@ class Instant_Noodles:
     else:
       self.__noodle_type = "ramen" #if new noodle type is anything other than the two, it will be set to ramen 
       self.__timer = 5 #timer is set to 5 mins
-    return self.__noodle_type
+    return self.__noodle_type #returns noodle type value
 
 #######################################
 
@@ -97,14 +98,14 @@ class Instant_Noodles:
   def set_flavor(self, new_flavor):
     lowered = new_flavor.lower() #lowercases the argument
     if lowered == "chicken": #if flavor argument is chicken, it will be set to chicken
-      self.__flavor = new_flavor
+      self.__flavor = new_flavor #new flavor is assigned
     elif lowered == "beef":#if flavor argument is beef, it will be set to beef
-      self.__flavor = new_flavor
+      self.__flavor = new_flavor #new flavor is assigned
     elif lowered == "pork":#if flavor argument is pork, it will be set to pork
-      self.__flavor = new_flavor
+      self.__flavor = new_flavor #new flavor is assigned
     else:
       self.__flavor = "shrimp"#if flavor argument is none of the above, it will be set to shrimp
-    return self.__flavor
+    return self.__flavor #returns flavor value
 
 #######################################
 
@@ -152,10 +153,10 @@ class Instant_Noodles:
 
   def microwave(self, m_time):
     brand = self.get_brand()
-    noodle_type = self.get_noodle_type()
+    noodle_type = self.get_noodle_type() #gets the user's noodle type and checks on line 158
     flavor = self.get_flavor()
 
-    #checks for proper time of each noodletype
+    #gets the proper time of each noodletype
     if noodle_type == "udon":
       self.__timer = 8
     elif noodle_type == "soba":
@@ -195,43 +196,27 @@ def main():
 
 
 
+  #mynoodle = Instant_Noodles("x", "y", "z")
 
-
-
-
-
-
-
-
-
-
-  '''
-  #mynoodle = Instant_Noodles("Nongshim", "ramen", "shrimp")
-
-  #brand
-  #mynoodle.set_brand("nissin")
+  ##brand##
+  #mynoodle.set_brand("x")
   #print(mynoodle.get_brand())
 
-  #noodle type
-  #mynoodle.set_noodle_type("udon")
-  #print(mynoodle.get_noodle_type())
-
-  #timer
-  #print("I should microwave my noodles for:", mynoodle.get_timer(), "minutes")
-
-  #noodletype
-  #print(mynoodle.get_noodle_type())
-  #mynoodle.set_noodle_type("udon")
+  ##noodle type##
+  #mynoodle.set_noodle_type("x")
   #print(mynoodle.get_noodle_type())
 
   #flavor
-  #mynoodle.set_flavor("Chicken")
+  #mynoodle.set_flavor("x")
   #print(mynoodle.get_flavor())
+
+  ##timer##
+  #print("I should microwave my noodles for:", mynoodle.get_timer(), "minutes")
 
   #other two methods
   #mynoodle.how_to_cook()
-  #mynoodle.microwave(8)
-  '''
+  #mynoodle.microwave(t)
+
 
 
 if __name__ == "__main__":

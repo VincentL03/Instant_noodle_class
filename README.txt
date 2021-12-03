@@ -42,7 +42,37 @@ All methods starting with set will require an argument within the parenthesis fo
 For the methods that begin with set, be sure to include the quotation marks in the argument, as it is required that arguments are strings. All other forms of arguments will be invalid, such as float/integers.
 All methods beginning with get will require a print statement. For example, to get_flavor, one must write this in the main function; print(get_flavor()). Get methods are unable to take in arguments, neither should they be taking arguments. We must print because the get methods only return values.
 
- How to set up demo program:
+
+How to use the included Demo Program:
+	Uncomment the first line, which should be mynoodle = Instant_Noodles("x", "y", "z"). x must be replaced with a valid brand of your choice, y must be replaced with a valid noodletype, z must be replaced with a valid flavor
+	Part1 - Brand - Valid Brands: Nongshim, Nissin, Maruchan
+			Choose a brand to replace x with, inside the quotation marks
+		Noodle Type - Valid Noodle Types: Udon, Ramen, Soba
+			Choose a noodle type to replace y with, inside the quotes
+		Flavors - Valid Flavors: Chicken, Pork, Shrimp, Beef
+			Choose a flavor to replace z with, in the quotes
+	Part2 - Changing things with get-set methods
+		2.1 - get-set brand
+		Remove the # on lines 202 and 203. To set a new brand, refer to the description of Part 1 >> Brand for valid brands. On line 202, in "mynoodle.set_brand("x")", replace x with a valid brand. Line 203 will print for you to see if the change worked or not
+		2.2 - get-set noodle types
+		Remove the # on lines 206 and 207. To set a new noodletype, refer to the description of Part 1 >> Noodle Type for valid noodle types. On line 206, in "mynoodle.set_noodle_type("x")", replace x with a valid noodle type. Line 207 will print for you to see if the change worked or not
+		2.3 - get-set flavor
+		Remove the # on lines 210 and 211. To set a new flavor, refer to the description of Part 1 >> Flavors for valid flavors. On line 210, in "mynoodle.set_flavor("x")", replace x with a valid flavor. Line 211 will print for you to see if the change worked or not
+		2.4 - get timer
+		Remove the # on line 214 and run the program. This method does not take any arguments. This will print out the time in minutes it should take to fully cook your noodle type in the microwave. If you don't know your noodle type, use get_noodle_type() method on line 207
+
+	Part3 - Other Methods:
+		Remove the # on line 217
+		my_noodle.how_to_cook() - Does not take any arguments. This will print instructions on how to cook the specified noodle you chose. It will also include how long you should microwave your noodles. You will need to remember this for the next function
+			Example: mynoodle.how_to_cook()
+
+		Remove the # on line 218
+		mynoodle.microwave(t) - Replace the t in the parenthesis with the correct integer of how long it should take (in minutes) to cook your noodles in the microwave. If you do not remember your noodletype, use "mynoode.get_flavor()" on line 211. If you do not remember the correct time, use the "mynoodle.how_to_cook()" function on line 217
+			Example: mynoodle.microwave(8)
+
+
+ How to set up your own demo program:
+	Comment out everything in the main() function before making your own demo program
 	Part 1 - Choosing your noodles
 		Step 1: Create an object name of your choice and have it equal "Instant_Noodles()". Inside the parenthesis, there should be 3 string arguments in quotations marks, separated by commas, which will be in this order; Brand, Noodle Type, Flavor.
 			keep in mind that valid options are limited and are listed below:
