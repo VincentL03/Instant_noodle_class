@@ -17,106 +17,107 @@ class Instant_Noodles:
     self.__noodle_type = noodle_type
     self.__flavor = flavor
     #ensures that the original inputs are valid, otherwise, set to original ramen
-    lowered_brand = brand.lower()
-    if lowered_brand == "nissin":
+    lowered_brand = brand.lower()#makes input argument lowercase
+    if lowered_brand == "nissin": #if brand argument is nissin it will stay as nissin
       self.__brand = brand
-    elif lowered_brand == "nongshim":
+    elif lowered_brand == "nongshim": #if brand argument is nongshim it will stay the same
       self.__brand = brand
-    elif lowered_brand == "maruchan":
+    elif lowered_brand == "maruchan": #if brand is maruchan, it will stay as such
       self.__brand = brand
     else:
-      print(f"Sorry, we couldn't find the '{brand}' brand, we'll give you 'Nissin' brand noodles.")
+      print(f"Sorry, we couldn't find the '{brand}' brand, we'll give you 'Nissin' brand noodles.") #if anything else, will give nissin
       self.__brand = "nissin"
     #ensures the validity of noodle flavors
-    lowered = flavor.lower()
-    if lowered == "chicken":
+    lowered = flavor.lower() #makes input argument lowercase
+    if lowered == "chicken": #if the input is chicken, user input is valid and will stay
       self.__flavor = flavor
-    elif lowered == "beef":
+    elif lowered == "beef":#if the input is beef, user input is valid and will stay
       self.__flavor = flavor
-    elif lowered == "pork":
+    elif lowered == "pork":#if the input is pork, user input is valid and will stay
       self.__flavor = flavor
     else:
-      self.__flavor = "shrimp"
+      self.__flavor = "shrimp" #base flavor is shrimp. if input is shrimp, it will stay shrimp
+
   #sets the proper names of noodle type and correlating time it takes to cook
     lowered_noodle_type = noodle_type.lower()
     if lowered_noodle_type == "udon":
       self.__noodle_type = noodle_type
-      self.__timer = 8
+      self.__timer = 8 #noodletype udon needs to be microwaved for 8 mins
     elif lowered_noodle_type == "soba":
       self.__noodle_type = noodle_type
-      self.__timer = 2
+      self.__timer = 2 #noodletype soba needs to be microwaved for 2 mins
     else:
       self.__noodle_type = "ramen"
-      self.__timer = 5
+      self.__timer = 5 #noodletype ramen needs to be microwaved for 5 mins
   
 #######################################
 #method to return the timer 
   def get_timer(self):
-    return self.__timer
+    return self.__timer #returns value of self.__timer
 
 #######################################
 #sets/changes brand name
   def set_brand(self, new_brand):
     lowered = new_brand.lower() #makes the input argument lowercase. if it is one of the following below, it will be left alone, however if it isn't it will be set nissin
-    if lowered == "nissin": 
+    if lowered == "nissin": #if new brand argument is nissin it will change to nissin
       self.__brand = new_brand
-    elif lowered == "nongshim":
+    elif lowered == "nongshim":#if new brand argument is nongshim it change to nongshim
       self.__brand = new_brand
-    elif lowered == "maruchan":
+    elif lowered == "maruchan": #if new brand is maruchan, it will change to maruchan
       self.__brand = new_brand
     else:
-      self.__brand = "nissin"
+      self.__brand = "nissin" #if new brand is not one of the three, it will be set to nissin
 
 #gets and returns brand name
   def get_brand(self):
-    return self.__brand
+    return self.__brand #returns value of self.__brand
 
 #######################################
 #changes the noodle type
   def set_noodle_type(self, new_type):
     lowered = new_type.lower()  #makes the input argument lowercase. if it is one of the following below, it will be left alone, however if it isn't it will be set to ramen
-    if lowered == "udon":
+    if lowered == "udon": #if new noodle type is udon,
       self.__noodle_type = new_type
-      self.__timer = 8
-    elif lowered == "soba":
+      self.__timer = 8 #timer is set to 8 mins
+    elif lowered == "soba": #if new noodle type is udon,
       self.__noodle_type = new_type
-      self.__timer = 6
+      self.__timer = 2 #timer set to 2 mins
     else:
-      self.__noodle_type = "ramen"
-      self.__timer = 5
+      self.__noodle_type = "ramen" #if new noodle type is anything other than the two, it will be set to ramen 
+      self.__timer = 5 #timer is set to 5 mins
     return self.__noodle_type
 
 #######################################
 
   def get_noodle_type(self):
-    return self.__noodle_type
+    return self.__noodle_type #returns valie of self.__noodle_type
 
 #######################################
 
   def set_flavor(self, new_flavor):
-    lowered = new_flavor.lower()
-    if lowered == "chicken":
+    lowered = new_flavor.lower() #lowercases the argument
+    if lowered == "chicken": #if flavor argument is chicken, it will be set to chicken
       self.__flavor = new_flavor
-    elif lowered == "beef":
+    elif lowered == "beef":#if flavor argument is beef, it will be set to beef
       self.__flavor = new_flavor
-    elif lowered == "pork":
+    elif lowered == "pork":#if flavor argument is pork, it will be set to pork
       self.__flavor = new_flavor
     else:
-      self.__flavor = "shrimp"
+      self.__flavor = "shrimp"#if flavor argument is none of the above, it will be set to shrimp
     return self.__flavor
 
 #######################################
 
   def get_flavor(self):
-    return self.__flavor
+    return self.__flavor #returns value of self.__flavor
 
 #######################################  
 
   def how_to_cook(self):
-    noodle_type = self.get_noodle_type()
-    flavor = self.get_flavor()
+    noodle_type = self.get_noodle_type() #get the returned output of get_noodle_type
+    flavor = self.get_flavor() #gets returned output of get_flavor
     
-    if noodle_type.lower() == "udon":
+    if noodle_type.lower() == "udon": #prints direction of udon if it is user's noodletype
       print("---------------------------")
       print("We will cook these instant noodles via microwave")
       print("How to cook your noodle type: Udon")
@@ -126,7 +127,7 @@ class Instant_Noodles:
       print("Stir noodles")
       print("Enjoy!")
       print("---------------------------")
-    elif noodle_type.lower() == "soba":
+    elif noodle_type.lower() == "soba":#prints direction of soba if it is user's noodletype
       print("---------------------------")
       print("We will cook these instant noodles via microwave")
       print("How to cook your noodle type: Soba")
@@ -135,7 +136,7 @@ class Instant_Noodles:
       print("Microwave the udon for 2 minutes")
       print("Enjoy!")
       print("---------------------------")
-    elif noodle_type.lower() == "ramen":
+    elif noodle_type.lower() == "ramen":#prints direction of ramen if it is user's noodletype
       print("---------------------------")
       print("We will cook these instant noodles via microwave")
       print("How to cook your noodle type: Ramen")
@@ -154,6 +155,7 @@ class Instant_Noodles:
     noodle_type = self.get_noodle_type()
     flavor = self.get_flavor()
 
+    #checks for proper time of each noodletype
     if noodle_type == "udon":
       self.__timer = 8
     elif noodle_type == "soba":
@@ -163,15 +165,15 @@ class Instant_Noodles:
       self.__timer = 5
     
     #Check if user input is correct for their noodle type
-    if m_time == self.__timer:
-      secs = m_time * 60
-    else:
+    if m_time == self.__timer: #if the argument and correct time argument matches up, it will continue
+      secs = m_time * 60  #60 seconds in a minute. so int of mins * 60 
+    else: #if wrong, it will print this and quit
       print(f"Sorry, the time you input to microwave '{noodle_type}' is wrong. Please find the proper time to microwave via the how_to_cook() method")
       quit()
     
     print(f"Please wait for {secs} seconds as we microwave this")
     for i in range(secs):
-      print(f"{secs - i} seconds left...")
+      print(f"{secs - i} seconds left...") #countdown printer
       time.sleep(1)
 
     output = ("✫ • ° •　　　　　　 · 　 ✲ ✧ ☆ . • •　　　 ✩ ✧ ☆　　　• °　　✽ • ★ . · ✧ ☆ . · .　 ☆　∗ .☆ •" "\n"
