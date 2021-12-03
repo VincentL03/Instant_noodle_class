@@ -109,5 +109,3 @@ How to use the included Demo Program:
  
 When attempting to run the demo program, it is recommended to run one print statement at a time, as reading the terminal/console can be confusing when trying to figure out what is being printed out.
 If you typed out all the methods explained above into the main file, be sure to comment out some gets methods so you don't get overwhelmed with print outputs.
-
-An example of what the test code should look like can be found at the bottom of the main() function. All are already commented out
