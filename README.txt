@@ -1,5 +1,5 @@
 README File
-GitHub Link: https://github.com/VincentL03/Assignment-10.1
+GitHub Link: https://github.com/VincentL03/Instant_noodle_class
 Vincent Liu
 CSE-20-03
 ASSIGNMENT 10.1
